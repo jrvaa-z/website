@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Journalist Profile — Julia Vaz</title>
+  <!-- EB Garamond from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="profile" aria-labelledby="profile-heading">
+      <h2 id="profile-heading" class="sr-only">Profile</h2>
+
+      <figure class="headshot">
+        <img src="images/headshot.jpg" alt="Headshot" />
+      </figure>
+
+      <div class="bio">
+        <h3 class="name">Julia Vaz</h3>
+        <p class="byline">Multimedia Climate and Science Reporter</p>
+
+        <p>
+          I'm a journalist interested in stories about the science and social impacts behind climate change. My goal is to innovate the way we tell stories about climate change, exploring multimedia approaches to highlight local communities and their relationships to nature. I've been an Inside Climate News fellow and interned at Heatmap News. Most recently, I worked as a By Degrees intern at New Hampshire Public Radio. In 2025, I graduated from Brown University with degrees in Political Science and Modern Culture & Media. I'm currently at the Massachusetts Institute of Technology, completing a master's in Science Writing.
+        </p>
+
+        <ul class="contact">
+          <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
+          <li>Twitter: <a href="https://twitter.com/example" target="_blank" rel="noopener">/@example</a></li>
+          <li>Location: City, Country</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="clips" aria-labelledby="clips-heading">
+      <h2 id="clips-heading">Here's some of my best work</h2>
+      <p class="clips-intro">Click a clip to preview it. If embedding is blocked, it will open in a new tab.</p>
+
+      <div class="gallery" id="gallery">
+        <!-- Existing clips -->
+        <article class="clip" tabindex="0">
+          <a href="https://www.nhpr.org/nh-news/2025-07-16/nh-farmers-cuts-grant-delays-usda-federal-farming"
+             data-clip-url="https://www.nhpr.org/nh-news/2025-07-16/nh-farmers-cuts-grant-delays-usda-federal-farming"
+             data-clip-title="Farmers"
+             class="clip-link">
+            <img src="images/thumb-video.jpg" alt="Farmers working in a field" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Farmers in NH navigate funding cuts, grant delays</h3>
+              <p class="clip-source">NHPR • 2025</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--reporting">Reporting</span>
+                <span class="tag tag--audio">Audio</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="clip" tabindex="0">
+          <a href="https://www.nhpr.org/nh-news/2025-08-04/jackson-historical-society-building-move-flooding-north-country"
+             data-clip-url="https://www.nhpr.org/nh-news/2025-08-04/jackson-historical-society-building-move-flooding-north-country"
+             data-clip-title="Jackson, flooding"
+             class="clip-link">
+            <img src="images/thumb-article.jpg" alt="Historic building on a trailer" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Historical Society puts its building on wheels to save it from future flooding</h3>
+              <p class="clip-source">NHPR • 2025</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--reporting">Reporting</span>
+                <span class="tag tag--audio">Audio</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="clip" tabindex="0">
+          <a href="https://www.nhpr.org/nh-news/2025-07-07/marsh-restoration-nh-new-england-sparrows-research-preservation"
+             data-clip-url="https://www.nhpr.org/nh-news/2025-07-07/marsh-restoration-nh-new-england-sparrows-research-preservation"
+             data-clip-title="Birds"
+             class="clip-link">
+            <img src="images/thumb-audio.jpg" alt="Researcher fitting a tiny radio transmitter on a sparrow" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Birds in tiny 'backpacks' might provide insights to marsh restoration</h3>
+              <p class="clip-source">NHPR • WBUR • 2025</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--reporting">Reporting</span>
+                <span class="tag tag--audio">Audio</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Updated clip: title already set; thumbnail replaced with the air-quality chart -->
+        <article class="clip" tabindex="0">
+          <a href="https://interactive.example.com/coastal-heatmap-2025"
+             data-clip-url="https://interactive.example.com/coastal-heatmap-2025"
+             data-clip-title="Most of this year's air quality alerts in NH were because of wildfires. That's likely the new normal."
+             class="clip-link">
+            <!-- New thumbnail for this clip: save the provided image as images/thumb-airquality.jpg -->
+            <img src="images/thumb-airquality.jpg"
+                 alt="Bar chart showing number of air quality alerts issued each year in New Hampshire and the pollutants behind each alert"
+                 class="clip-thumb"
+                 loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Most of this year's air quality alerts in NH were because of wildfires. That's likely the new normal.</h3>
+              <p class="clip-source">NHPR • 2025</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--data">Data Visualization</span>
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEW CLIP: Inside Climate News -->
+        <article class="clip" tabindex="0">
+          <a href="https://insideclimatenews.org/news/28032025/a-new-bill-in-rhode-island-would-give-electric-ratepayers-more-resources-to-fight-back/"
+             data-clip-url="https://insideclimatenews.org/news/28032025/a-new-bill-in-rhode-island-would-give-electric-ratepayers-more-resources-to-fight-back/"
+             data-clip-title="RI Electric"
+             class="clip-link">
+            <img src="images/thumb-photo.jpg" alt="Protesters and utilities building" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">New RI Bill Would Give Electric Ratepayers More Resources to Fight Back</h3>
+              <p class="clip-source">Inside Climate News • 2025</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- HEAT CLIP: updated thumbnail -->
+        <article class="clip" tabindex="0">
+          <a href="https://heatmap.news/climate/summer-heat-midwest-schools"
+             data-clip-url="https://heatmap.news/climate/summer-heat-midwest-schools"
+             data-clip-title="Heat"
+             class="clip-link">
+            <img src="images/thumb-heat.jpg" alt="Bar chart: cities with uncommonly hot weather" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Week in Heat</h3>
+              <p class="clip-source">Heatmap News • 2024</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--data">Data Visualization</span>
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEW CLIP: Death Valley -->
+        <article class="clip" tabindex="0">
+          <a href="https://heatmap.news/lifestyle/death-valley-temperature-tourism"
+             data-clip-url="https://heatmap.news/lifestyle/death-valley-temperature-tourism"
+             data-clip-title="Death Valley"
+             class="clip-link">
+            <img src="images/thumb-article2.jpg" alt="Desert landscape with visitors" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Death Valley Park Rangers, unlike tourists, don't mess with the heat</h3>
+              <p class="clip-source">Heatmap News • 2024</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEW CLIP: YouTube interview -->
+        <article class="clip" tabindex="0">
+          <a href="https://www.instagram.com/reel/CzT5SeguPMg/"
+             data-clip-url="https://www.instagram.com/reel/CzT5SeguPMg/"
+             data-clip-title="Providence Herbarium"
+             class="clip-link">
+            <img src="images/thumb-youtube.jpg" alt="Still from interview video" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Providence Community Herbarium bridges science and art through printmaking</h3>
+              <p class="clip-source">Brown Daily Herald • 2023</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--video">Video</span>
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEW CLIP: Podcast episode -->
+        <article class="clip" tabindex="0">
+          <a href="https://podcasts.example.com/voices-from-the-field-ep12"
+             data-clip-url="https://podcasts.example.com/voices-from-the-field-ep12"
+             data-clip-title="Voices from the Field — Ep.12"
+             class="clip-link">
+            <img src="images/thumb-podcast.jpg" alt="Microphone and field notes" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Voices from the Field — Heat and Community</h3>
+              <p class="clip-source">Podcast • 2023</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--audio">Audio</span>
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEW CLIP: Photo essay (shoreline resilience) -->
+        <article class="clip" tabindex="0">
+          <a href="https://photos.example.org/shoreline-resilience"
+             data-clip-url="https://photos.example.org/shoreline-resilience"
+             data-clip-title="Shoreline Resilience"
+             class="clip-link">
+            <img src="images/thumb-shoreline.jpg" alt="Portrait from shoreline photo essay" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Shoreline portraits: communities adapting to rising tides</h3>
+              <p class="clip-source">Photo Essay • 2024</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--photo">Photo</span>
+                <span class="tag tag--reporting">Reporting</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEW CLIP: Flood risk interactive -->
+        <article class="clip" tabindex="0">
+          <a href="https://interactive.example.com/flood-risk-map"
+             data-clip-url="https://interactive.example.com/flood-risk-map"
+             data-clip-title="Flood Risk Map"
+             class="clip-link">
+            <img src="images/thumb-flood.jpg" alt="Map preview showing flood risk" class="clip-thumb" loading="lazy" />
+            <div class="clip-meta">
+              <h3 class="clip-title">Interactive: Local flood risk and who is affected</h3>
+              <p class="clip-source">Interactive • 2024</p>
+              <div class="tags" aria-hidden="true">
+                <span class="tag tag--data">Data Visualization</span>
+                <span class="tag tag--reporting">Reporting</span>
+                <span class="tag tag--editing">Editing</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Add more clips by duplicating the above block and updating data attributes and tags -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for previewing clips -->
+  <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Clip preview">
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- iframe or fallback will be injected here -->
+      </div>
+      <div class="modal-footer" id="modalFooter">
+        <a id="openExternal" class="external-link" href="#" target="_blank" rel="noopener">Open original</a>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop" tabindex="-1"></div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
