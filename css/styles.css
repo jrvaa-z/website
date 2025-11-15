@@ -73,7 +73,7 @@ body{
   transition:transform .12s ease, box-shadow .12s ease;
 }
 .clip:focus-within, .clip:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.08)}
-/* .clip-link{
+.clip-link{
   color:inherit;
   display:block;
   text-decoration:none;
@@ -81,24 +81,10 @@ body{
 }
 .clip-thumb{
   width:100%;
-  height:260px; 
-  aspect-ratio: 1 / 1;
+  height:140px;
   object-fit:cover;
   border-radius:6px;
   display:block;
-} */ 
-.clip-link {
-  color: inherit;
-  display: block;
-  text-decoration: none;
-  padding: 0; 
-}
-
-.clip-thumb {
-  width: 100%;
-  aspect-ratio: 5 / 4;   
-  object-fit: cover;
-  display: block;
 }
 .clip-meta{padding-top:8px}
 .clip-title{margin:6px 0 4px;font-size:1rem;font-weight:500}
