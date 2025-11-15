@@ -91,14 +91,13 @@ body{
   color: inherit;
   display: block;
   text-decoration: none;
-  padding: 0; /* 🔥 remove padding so the image can grow */
+  padding: 0; 
 }
 
 .clip-thumb {
   width: 100%;
-  aspect-ratio: 5 / 4;   /* or 4/3, 6/5, etc */
+  aspect-ratio: 5 / 4;   
   object-fit: cover;
-  border-radius: 0;      /* optional: remove radius so image sits flush */
   display: block;
 }
 .clip-meta{padding-top:8px}
