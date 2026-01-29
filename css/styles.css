@@ -117,7 +117,8 @@ body{
 .tag--audio{ background:#6a5f52 }       /* warm taupe */
 .tag--video{ background:#496b5a }       /* muted teal */
 .tag--photo{ background:#6a7b59 }       /* olive-green */
-.tag--data{ background:#7a6f86 }        /* muted mauve */
+.tag--data{ background:#7a6f86 } 
+.tag--investigation{ background:#9c9184 } 
 /* Editing */
 .tag--editing{ background:#5f605c }
 
