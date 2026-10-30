@@ -57,7 +57,7 @@ select {
 .name {
   margin: 0 0 26px;
   font-family: var(--serif);
-  font-size: clamp(2.5rem, 3vw, 4rem);
+  font-size: clamp(1.9rem, 2.3vw, 3rem);
   font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 0.96;
@@ -68,7 +68,7 @@ select {
   margin: 0;
   max-width: 30ch;
   color: var(--muted);
-  font-size: clamp(1.1rem, 1.7vw, 2rem);
+  font-size: clamp(0.95rem, 1.3vw, 1.55rem);
   font-family: var(--serif);
   letter-spacing: -0.03em;
   line-height: 1.12;
