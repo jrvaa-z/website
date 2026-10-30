@@ -1,171 +1,207 @@
-:root{
-  --max-width: 1100px;
-  --accent: #0077cc;
-  --muted: #666;
-  --bg: #f9f9fb;
-  --card-bg: #ffffff;
-  --radius: 8px;
-  /* Use EB Garamond as the primary typeface, with sensible fallbacks */
-  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+:root {
+  --bg: #2b2d2f;
+  --panel: #f2f1ee;
+  --ink: #f5f3ef;
+  --muted: rgba(245, 243, 239, 0.75);
+  --line: rgba(255, 255, 255, 0.08);
+  --text-dark: #171716;
+  --serif: 'EB Garamond', Georgia, serif;
+  --sans: 'Inter', 'Segoe UI', sans-serif;
+  --shadow: rgba(0, 0, 0, 0.18);
 }
 
-/* Basic reset and layout (existing styles preserved) */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background:var(--bg);
-  color:#111;
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
-  font-family: inherit;
+* {
+  box-sizing: border-box;
 }
 
-.wrap{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:24px;
+html {
+  scroll-behavior: smooth;
 }
 
-.profile {
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.45;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.portfolio-shell {
+  width: min(1220px, calc(100% - 42px));
+  margin: 0 auto;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr; /* was 160px 1fr */
-  gap: 20px;
+  grid-template-columns: 1.1fr 0.9fr 0.55fr;
   align-items: start;
-  margin-top: 28px;
-  padding: 18px;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  gap: 26px;
+  padding: 38px 0 54px;
 }
 
-.headshot img{
-  width:160px;
-  height:160px;
-  object-fit:cover;
-  object-position:center;
-  border-radius:8px; /* changed from 50% (circle) to 8px for a square with soft corners */
-  display:block;
-  border:1px solid rgba(0,0,0,0.06);
+.bio-panel,
+.recent-panel {
+  padding-top: 8px;
 }
 
-.bio .name{margin:0;font-size:1.25rem;font-weight:600}
-.bio .byline{color:var(--muted);margin-top:4px;margin-bottom:10px}
-.contact{list-style:none;padding:0;margin:12px 0 0;color:var(--muted)}
-.contact li{margin-bottom:6px}
-
-.clips{
-  margin-top:20px;
-}
-.clips-intro{color:var(--muted);margin-bottom:12px}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:14px;
+.name {
+  margin: 0 0 26px;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.96;
+  color: var(--ink);
 }
 
-.clip{
-  background:var(--card-bg);
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 1px 2px rgba(0,0,0,0.03);
-  transition:transform .12s ease, box-shadow .12s ease;
-}
-.clip:focus-within, .clip:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.08)}
-.clip-link{
-  color:inherit;
-  display:block;
-  text-decoration:none;
-  padding:10px;
-}
-.clip-thumb{
-  width:100%;
-  height:140px;
-  object-fit:cover;
-  border-radius:6px;
-  display:block;
-}
-.clip-meta{padding-top:8px}
-.clip-title{margin:6px 0 4px;font-size:1rem;font-weight:500}
-.clip-source{margin:0;color:var(--muted);font-size:.9rem}
-
-/* Tags: small colored pills for work type (subtle, neutral palette) */
-.tags{
-  margin-top:6px;
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-.tag{
-  display:inline-block;
-  padding:4px 8px;        /* compact pill */
-  font-size:0.75rem;      /* small text */
-  font-weight:600;
-  color:#fff;
-  border-radius:999px;
-  line-height:1;
-  white-space:nowrap;
-  letter-spacing:0.01em;
-  opacity:0.95;
-  box-shadow:0 1px 0 rgba(0,0,0,0.04);
+.bio-copy {
+  margin: 0;
+  max-width: 26ch;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 1.7vw, 2rem);
+  font-family: var(--serif);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
 }
 
-/* Neutral, editorial-ready color variants (more muted, not all green) */
-.tag--reporting{ background:#55606a }   /* slate gray */
-.tag--audio{ background:#6a5f52 }       /* warm taupe */
-.tag--video{ background:#496b5a }       /* muted teal */
-.tag--photo{ background:#6a7b59 }       /* olive-green */
-.tag--data{ background:#7a6f86 } 
-.tag--investigation{ background:#9c9184 } 
-/* Editing */
-.tag--editing{ background:#5f605c }
-
-/* Modal */
-.modal{display:none;position:fixed;inset:0;z-index:60;align-items:center;justify-content:center}
-.modal[aria-hidden="false"]{display:flex}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45)}
-.modal-content{
-  position:relative;
-  max-width:900px;
-  width:calc(100% - 48px);
-  max-height:85vh;
-  background:#fff;
-  margin:auto;
-  border-radius:10px;
-  overflow:hidden;
-  z-index:61;
-  box-shadow:0 10px 40px rgba(0,0,0,0.25);
-}
-.modal-body{background:#111;min-height:360px;display:flex;align-items:center;justify-content:center}
-.modal-body iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
-.modal-close{
-  position:absolute;right:10px;top:10px;background:transparent;border:0;font-size:28px;color:#fff;cursor:pointer;
-}
-.modal-footer{padding:10px;background:#fff;text-align:right}
-.external-link{color:var(--accent);text-decoration:none;font-weight:600}
-
-/* Accessibility helper */
-.sr-only{
-  position:absolute!important;
-  height:1px;width:1px;
-  overflow:hidden;clip:rect(1px,1px,1px,1px);
-  white-space:nowrap;border:0;padding:0;margin:-1px;
+.feature-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
 }
 
-/* Responsive */
-@media (max-width:900px){
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .profile{grid-template-columns:120px 1fr}
-  .headshot img{width:120px;height:120px;border-radius:8px} /* keep square on smaller screens too */
-  .tag{padding:3px 7px;font-size:0.72rem} /* slightly smaller on narrow screens */
+.portrait-card {
+  width: min(100%, 500px);
+  margin: 0 auto;
+  aspect-ratio: 1 / 1.18;
+  overflow: hidden;
+  background: #dfe3df;
+  box-shadow: 0 26px 40px rgba(0, 0, 0, 0.14);
 }
-@media (max-width:560px){
-  .wrap{padding:16px}
-  .profile{grid-template-columns:1fr;grid-template-rows:auto auto;align-items:center;text-align:center}
-  .headshot img{margin:0 auto}
-  .gallery{grid-template-columns:1fr}
-  .modal-body{min-height:260px}
-  .tag{padding:3px 6px;font-size:0.7rem}
+
+.portrait-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.02);
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.quick-links a {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: clamp(1.7rem, 2.4vw, 2.9rem);
+  font-family: var(--serif);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  transition: opacity 0.2s ease;
+  text-decoration-thickness: 1px;
+}
+
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  opacity: 0.7;
+}
+
+.recent-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 6px;
+}
+
+.recent-label {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  font-family: var(--serif);
+  line-height: 1;
+}
+
+.recent-phrase {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.15rem, 1.7vw, 2rem);
+  font-family: var(--serif);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.recent-phrase:focus-visible {
+  text-decoration: underline;
+}
+
+.recent-phrase.is-animating {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@media (max-width: 980px) {
+  .portfolio-shell {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 26px 0 46px;
+  }
+
+  .bio-copy {
+    max-width: 100%;
+  }
+
+  .feature-panel {
+    order: 2;
+  }
+
+  .portrait-card {
+    width: min(100%, 540px);
+  }
+
+  .quick-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+
+  .quick-links a {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .portfolio-shell {
+    width: min(100% - 24px, 600px);
+  }
+
+  .name {
+    margin-bottom: 18px;
+  }
+
+  .bio-copy {
+    font-size: 1.06rem;
+    line-height: 1.2;
+  }
+
+  .portrait-card {
+    aspect-ratio: 1.06 / 1.15;
+  }
 }
