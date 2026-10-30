@@ -43,9 +43,9 @@ select {
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.15fr 0.8fr 0.9fr;
+  grid-template-columns: 1.2fr 0.8fr 0.95fr;
   align-items: start;
-  gap: 26px;
+  gap: 18px;
   padding: 38px 0 54px;
 }
 
@@ -66,7 +66,7 @@ select {
 
 .bio-copy {
   margin: 0;
-  max-width: 26ch;
+  max-width: 30ch;
   color: var(--muted);
   font-size: clamp(1.1rem, 1.7vw, 2rem);
   font-family: var(--serif);
