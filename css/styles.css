@@ -1,9 +1,13 @@
 :root {
   --bg: #2b2d2f;
+  --panel: #f2f1ee;
   --ink: #f5f3ef;
   --muted: rgba(245, 243, 239, 0.75);
+  --line: rgba(255, 255, 255, 0.08);
+  --text-dark: #171716;
   --serif: 'EB Garamond', Georgia, serif;
   --sans: 'Inter', 'Segoe UI', sans-serif;
+  --shadow: rgba(0, 0, 0, 0.18);
 }
 
 * {
@@ -24,8 +28,14 @@ body {
 }
 
 img {
-  display: block;
   max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
 }
 
 .portfolio-shell {
@@ -76,7 +86,7 @@ img {
   margin: 0 auto;
   aspect-ratio: 1 / 1.18;
   overflow: hidden;
-  background: linear-gradient(135deg, #dfe8d8, #a9bca8 40%, #70856f 100%);
+  background: #dfe3df;
   box-shadow: 0 26px 40px rgba(0, 0, 0, 0.14);
 }
 
@@ -84,8 +94,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  filter: saturate(0.8) contrast(1.04) brightness(0.96);
+  filter: saturate(0.8) contrast(1.02);
 }
 
 .quick-links {
@@ -104,6 +113,7 @@ img {
   line-height: 0.92;
   letter-spacing: -0.05em;
   transition: opacity 0.2s ease;
+  text-decoration-thickness: 1px;
 }
 
 .quick-links a:hover,
@@ -158,6 +168,10 @@ img {
     max-width: 100%;
   }
 
+  .feature-panel {
+    order: 2;
+  }
+
   .portrait-card {
     width: min(100%, 540px);
   }
@@ -185,5 +199,9 @@ img {
   .bio-copy {
     font-size: 1.06rem;
     line-height: 1.2;
+  }
+
+  .portrait-card {
+    aspect-ratio: 1.06 / 1.15;
   }
 }

@@ -25,7 +25,7 @@
   }
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter' && document.activeElement === phraseEl) {
+    if (event.key === 'Enter') {
       event.preventDefault();
       showNextStory();
     }
